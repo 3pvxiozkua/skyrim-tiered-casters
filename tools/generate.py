@@ -224,8 +224,14 @@ MODULES = [
 
 
 def level_filter(level, school, skill):
-    """Build the SPID level-filter field: level floor plus a school skill floor."""
-    return "%d/,%d(%d/)" % (max(1, level), school, skill)
+    """Build the SPID level-filter field: level floor plus a school skill floor.
+
+    A single number means "this value or higher" for both halves of the field, so
+    the bare forms `30` and `14(55)` are used rather than `30/` and `14(55/)` -
+    both halves of a range are optional in SPID, but an empty upper bound is the
+    one form the reference does not spell out.
+    """
+    return "%d,%d(%d)" % (max(1, level), school, skill)
 
 
 def spell_line(spell, school, skill, level, chance):
@@ -254,7 +260,7 @@ def header(title, blurb, extra=None):
         "; Line format:",
         ";   Spell = <EditorID>|<string filters>|<form filters>|<level filters>|<traits>|<count>|<chance>",
         ";   - string filters: NPC name or EditorID, * is a wildcard",
-        ";   - level filters : <level>/,<schoolIndex>(<skill>/)  -> both floors must be met",
+        ";   - level filters : <level>,<schoolIndex>(<skill>)  -> both floors must be met",
         ";   - traits        : -U not unique, -C not a child, -T not a teammate",
         ";   - chance        : 0-100, the ! suffix makes the roll deterministic per NPC per save",
         ";",
@@ -294,7 +300,7 @@ def render_module(module):
     for spell, school, skill, chance, why in module["lines"]:
         out.append(";   %-16s %-12s skill %-3d -> %d%%  (%s)"
                    % (spell, SCHOOL[school], skill, chance, why))
-        out.append("Spell = %s|%s|NONE|%d(%d/)|%s|1|%d!"
+        out.append("Spell = %s|%s|NONE|%d(%d)|%s|1|%d!"
                    % (spell, ALL_CASTERS, school, skill, TRAITS, chance))
     out.append("")
     out.append("; %d distribution lines in this module." % len(module["lines"]))
