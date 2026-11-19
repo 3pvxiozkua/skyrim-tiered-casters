@@ -130,10 +130,11 @@ one. Nothing is baked into your save.
 
 SPID's level filter field takes two kinds of expression: a level range, and a skill range written as
 `<schoolIndex>(<min>/<max>)`. Skyrim's school indices are 12 Alteration, 13 Conjuration,
-14 Destruction, 15 Illusion, 16 Restoration. All conditions in that field must be met, so
+14 Destruction, 15 Illusion, 16 Restoration. A single number means "this or higher". All
+conditions in that field must be met, so
 
 ```
-Spell = Fireball|*Necromancer|NONE|30/,14(55/)|-U/-C/-T|1|55!
+Spell = Fireball|*Necromancer|NONE|30,14(55)|-U/-C/-T|1|55!
 ```
 
 reads as: give Fireball to non-unique, non-child, non-teammate NPCs whose name contains
@@ -182,10 +183,10 @@ If nothing appears, in order of likelihood:
 ## Tuning it yourself
 
 Every file is plain text. Want your necromancers to get Incinerate at level 35 instead of 45? Change
-`45/` to `35/` on that line. Want a spell for an archetype this mod does not cover? Add a line:
+`45` to `35` on that line. Want a spell for an archetype this mod does not cover? Add a line:
 
 ```
-Spell = IceStorm|*Hagraven|NONE|20/,14(40/)|-U/-C/-T|1|60!
+Spell = IceStorm|*Hagraven|NONE|20,14(40)|-U/-C/-T|1|60!
 ```
 
 Keep the seven fields, keep the `|` separators, and check the SPID reference for anything beyond the
