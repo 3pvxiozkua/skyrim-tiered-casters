@@ -1,0 +1,497 @@
+{
+  "mod": "Tiered Casters",
+  "version": "1.0.0",
+  "archetypes": [
+    {
+      "id": "necromancer",
+      "title": "Necromancer",
+      "match": "*Necromancer",
+      "blurb": "Vanilla necromancers lean on Conjuration and Destruction but only ever carry the opening spells of both schools.",
+      "lines": [
+        {
+          "spell": "ConjureFamiliar",
+          "school": "Conjuration",
+          "skill": 25,
+          "level": 10,
+          "tier": 1,
+          "chance": 70,
+          "why": "first summon, so a fresh necromancer has a bodyguard"
+        },
+        {
+          "spell": "Firebolt",
+          "school": "Destruction",
+          "skill": 30,
+          "level": 12,
+          "tier": 1,
+          "chance": 70,
+          "why": "replaces Flames as the default attack"
+        },
+        {
+          "spell": "RaiseZombie",
+          "school": "Conjuration",
+          "skill": 40,
+          "level": 18,
+          "tier": 2,
+          "chance": 60,
+          "why": "starts recycling the corpses the player leaves behind"
+        },
+        {
+          "spell": "IceSpike",
+          "school": "Destruction",
+          "skill": 40,
+          "level": 20,
+          "tier": 2,
+          "chance": 60,
+          "why": "second element, so fights are not all fire"
+        },
+        {
+          "spell": "ConjureFlameAtronach",
+          "school": "Conjuration",
+          "skill": 50,
+          "level": 28,
+          "tier": 3,
+          "chance": 55,
+          "why": "mid-game summon"
+        },
+        {
+          "spell": "Fireball",
+          "school": "Destruction",
+          "skill": 55,
+          "level": 30,
+          "tier": 3,
+          "chance": 55,
+          "why": "area pressure once Destruction is trained"
+        },
+        {
+          "spell": "Incinerate",
+          "school": "Destruction",
+          "skill": 70,
+          "level": 45,
+          "tier": 4,
+          "chance": 45,
+          "why": "expert tier, reserved for late-game casters"
+        }
+      ]
+    },
+    {
+      "id": "warlock",
+      "title": "Warlock",
+      "match": "*Warlock",
+      "blurb": "Shock specialists. Vanilla warlocks never get past Lightning Bolt, and they never use the armour spells their Alteration skill pays for.",
+      "lines": [
+        {
+          "spell": "LightningBolt",
+          "school": "Destruction",
+          "skill": 30,
+          "level": 10,
+          "tier": 1,
+          "chance": 70,
+          "why": "core attack"
+        },
+        {
+          "spell": "Stoneflesh",
+          "school": "Alteration",
+          "skill": 30,
+          "level": 14,
+          "tier": 1,
+          "chance": 55,
+          "why": "survives the first arrow volley"
+        },
+        {
+          "spell": "ChainLightning",
+          "school": "Destruction",
+          "skill": 50,
+          "level": 26,
+          "tier": 3,
+          "chance": 55,
+          "why": "punishes players who bring followers"
+        },
+        {
+          "spell": "Ironflesh",
+          "school": "Alteration",
+          "skill": 55,
+          "level": 34,
+          "tier": 3,
+          "chance": 45,
+          "why": "armour spell upgrade"
+        },
+        {
+          "spell": "Thunderbolt",
+          "school": "Destruction",
+          "skill": 70,
+          "level": 45,
+          "tier": 4,
+          "chance": 45,
+          "why": "expert tier"
+        }
+      ]
+    },
+    {
+      "id": "conjurer",
+      "title": "Conjurer",
+      "match": "*Conjurer",
+      "blurb": "Pure summoners. Their whole identity is the summon list, and vanilla stops it at Flame Atronach.",
+      "lines": [
+        {
+          "spell": "ConjureFamiliar",
+          "school": "Conjuration",
+          "skill": 25,
+          "level": 8,
+          "tier": 1,
+          "chance": 75,
+          "why": "always-on opening summon"
+        },
+        {
+          "spell": "ConjureFlameAtronach",
+          "school": "Conjuration",
+          "skill": 40,
+          "level": 18,
+          "tier": 2,
+          "chance": 60,
+          "why": "second summon tier"
+        },
+        {
+          "spell": "ConjureFrostAtronach",
+          "school": "Conjuration",
+          "skill": 55,
+          "level": 28,
+          "tier": 3,
+          "chance": 50,
+          "why": "third summon tier"
+        },
+        {
+          "spell": "ConjureStormAtronach",
+          "school": "Conjuration",
+          "skill": 70,
+          "level": 40,
+          "tier": 4,
+          "chance": 40,
+          "why": "top summon tier"
+        }
+      ]
+    },
+    {
+      "id": "forsworn-shaman",
+      "title": "Forsworn Shaman",
+      "match": "*Shaman",
+      "blurb": "Reach shamans are Restoration/Illusion casters in the lore and single-school spell plinkers in the game.",
+      "lines": [
+        {
+          "spell": "Oakflesh",
+          "school": "Alteration",
+          "skill": 25,
+          "level": 8,
+          "tier": 1,
+          "chance": 55,
+          "why": "cheap early defence"
+        },
+        {
+          "spell": "FastHealing",
+          "school": "Restoration",
+          "skill": 25,
+          "level": 10,
+          "tier": 1,
+          "chance": 65,
+          "why": "heals through the first burst of damage"
+        },
+        {
+          "spell": "Fury",
+          "school": "Illusion",
+          "skill": 25,
+          "level": 12,
+          "tier": 1,
+          "chance": 55,
+          "why": "turns the camp against itself"
+        },
+        {
+          "spell": "CloseWounds",
+          "school": "Restoration",
+          "skill": 50,
+          "level": 25,
+          "tier": 3,
+          "chance": 50,
+          "why": "mid-game sustain"
+        },
+        {
+          "spell": "Fear",
+          "school": "Illusion",
+          "skill": 50,
+          "level": 28,
+          "tier": 3,
+          "chance": 45,
+          "why": "crowd control"
+        },
+        {
+          "spell": "Ironflesh",
+          "school": "Alteration",
+          "skill": 60,
+          "level": 35,
+          "tier": 4,
+          "chance": 40,
+          "why": "late-game defence"
+        }
+      ]
+    },
+    {
+      "id": "vampire",
+      "title": "Vampire",
+      "match": "*Vampire",
+      "blurb": "Vampires get frost and drain only. Higher ranks should feel like predators, not like bandits with fangs.",
+      "lines": [
+        {
+          "spell": "Fear",
+          "school": "Illusion",
+          "skill": 25,
+          "level": 15,
+          "tier": 1,
+          "chance": 50,
+          "why": "predator opening"
+        },
+        {
+          "spell": "RaiseZombie",
+          "school": "Conjuration",
+          "skill": 40,
+          "level": 25,
+          "tier": 2,
+          "chance": 40,
+          "why": "raises the bodies in the room"
+        },
+        {
+          "spell": "IceStorm",
+          "school": "Destruction",
+          "skill": 45,
+          "level": 28,
+          "tier": 3,
+          "chance": 45,
+          "why": "area frost"
+        },
+        {
+          "spell": "IcySpear",
+          "school": "Destruction",
+          "skill": 65,
+          "level": 45,
+          "tier": 4,
+          "chance": 40,
+          "why": "expert tier"
+        }
+      ]
+    },
+    {
+      "id": "pyromancer",
+      "title": "Pyromancer",
+      "match": "*Pyromancer",
+      "blurb": "Elemental specialists whose name already promises a full spell line.",
+      "lines": [
+        {
+          "spell": "Firebolt",
+          "school": "Destruction",
+          "skill": 25,
+          "level": 12,
+          "tier": 1,
+          "chance": 70,
+          "why": "fire line, tier 1"
+        },
+        {
+          "spell": "Fireball",
+          "school": "Destruction",
+          "skill": 45,
+          "level": 25,
+          "tier": 2,
+          "chance": 60,
+          "why": "fire line, tier 2"
+        },
+        {
+          "spell": "Incinerate",
+          "school": "Destruction",
+          "skill": 65,
+          "level": 40,
+          "tier": 4,
+          "chance": 50,
+          "why": "fire line, tier 3"
+        }
+      ]
+    },
+    {
+      "id": "cryomancer",
+      "title": "Cryomancer",
+      "match": "*Cryomancer",
+      "blurb": "Frost line, mirroring the pyromancer table.",
+      "lines": [
+        {
+          "spell": "IceSpike",
+          "school": "Destruction",
+          "skill": 25,
+          "level": 12,
+          "tier": 1,
+          "chance": 70,
+          "why": "frost line, tier 1"
+        },
+        {
+          "spell": "IceStorm",
+          "school": "Destruction",
+          "skill": 45,
+          "level": 25,
+          "tier": 2,
+          "chance": 60,
+          "why": "frost line, tier 2"
+        },
+        {
+          "spell": "IcySpear",
+          "school": "Destruction",
+          "skill": 65,
+          "level": 40,
+          "tier": 4,
+          "chance": 50,
+          "why": "frost line, tier 3"
+        }
+      ]
+    },
+    {
+      "id": "electromancer",
+      "title": "Electromancer",
+      "match": "*Electromancer",
+      "blurb": "Shock line, mirroring the pyromancer table.",
+      "lines": [
+        {
+          "spell": "LightningBolt",
+          "school": "Destruction",
+          "skill": 25,
+          "level": 12,
+          "tier": 1,
+          "chance": 70,
+          "why": "shock line, tier 1"
+        },
+        {
+          "spell": "ChainLightning",
+          "school": "Destruction",
+          "skill": 45,
+          "level": 25,
+          "tier": 2,
+          "chance": 60,
+          "why": "shock line, tier 2"
+        },
+        {
+          "spell": "Thunderbolt",
+          "school": "Destruction",
+          "skill": 65,
+          "level": 40,
+          "tier": 4,
+          "chance": 50,
+          "why": "shock line, tier 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "vanillaplus",
+      "title": "Vanilla+",
+      "level_delta": 6,
+      "chance_mult": 0.75,
+      "max_tier": 2,
+      "blurb": "Same spell lists as vanilla for most of the game. Only the late-game casters get anything new, and only at reduced odds."
+    },
+    {
+      "id": "standard",
+      "title": "Standard",
+      "level_delta": 0,
+      "chance_mult": 1.0,
+      "max_tier": 4,
+      "blurb": "The intended experience: every archetype reaches its full table, gated by level and by the skill the spell actually needs."
+    },
+    {
+      "id": "ruthless",
+      "title": "Ruthless",
+      "level_delta": -4,
+      "chance_mult": 1.25,
+      "max_tier": 4,
+      "blurb": "Everything arrives four levels earlier and almost always lands. Expect expert-tier spells in the thirties."
+    }
+  ],
+  "modules": [
+    {
+      "id": "healers",
+      "title": "Restoration Self-Heal",
+      "blurb": "Casters who actually trained Restoration patch themselves up mid-fight instead of standing in the open at 10% health.",
+      "lines": [
+        {
+          "spell": "FastHealing",
+          "school": "Restoration",
+          "skill": 40,
+          "chance": 35,
+          "why": "any caster with Restoration 40"
+        },
+        {
+          "spell": "CloseWounds",
+          "school": "Restoration",
+          "skill": 60,
+          "chance": 25,
+          "why": "any caster with Restoration 60"
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "title": "Alteration Armour Spells",
+      "blurb": "The armour-spell ladder, handed out by Alteration skill rather than by archetype, so a warlock and a shaman both get what they trained for.",
+      "lines": [
+        {
+          "spell": "Oakflesh",
+          "school": "Alteration",
+          "skill": 20,
+          "chance": 55,
+          "why": "Alteration 20"
+        },
+        {
+          "spell": "Stoneflesh",
+          "school": "Alteration",
+          "skill": 40,
+          "chance": 50,
+          "why": "Alteration 40"
+        },
+        {
+          "spell": "Ironflesh",
+          "school": "Alteration",
+          "skill": 60,
+          "chance": 40,
+          "why": "Alteration 60"
+        },
+        {
+          "spell": "Ebonyflesh",
+          "school": "Alteration",
+          "skill": 80,
+          "chance": 30,
+          "why": "Alteration 80"
+        }
+      ]
+    },
+    {
+      "id": "illusion",
+      "title": "Illusion Pressure",
+      "blurb": "Fury, Fear and Calm handed to the casters whose lore supports them. Off by default because fear and calm effects change how a fight reads.",
+      "lines": [
+        {
+          "spell": "Fury",
+          "school": "Illusion",
+          "skill": 30,
+          "chance": 45,
+          "why": "Illusion 30"
+        },
+        {
+          "spell": "Fear",
+          "school": "Illusion",
+          "skill": 45,
+          "chance": 40,
+          "why": "Illusion 45"
+        },
+        {
+          "spell": "Calm",
+          "school": "Illusion",
+          "skill": 60,
+          "chance": 25,
+          "why": "Illusion 60"
+        }
+      ]
+    }
+  ]
+}
