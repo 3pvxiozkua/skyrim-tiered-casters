@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Tiered Casters</moduleName>
+
+  <installSteps order="Explicit">
+
+    <installStep name="Difficulty Preset">
+      <optionalFileGroups order="Explicit">
+        <group name="Which preset do you want?" type="SelectExactlyOne">
+          <plugins order="Explicit">
+
+            <plugin name="Standard (recommended)">
+              <description>Every archetype reaches its full spell table, gated by level and by the school skill the spell actually needs. Expert-tier spells only show up in the forties and above.</description>
+              <files>
+                <file source="Presets/TieredCasters_Standard_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Recommended" />
+              </typeDescriptor>
+            </plugin>
+
+            <plugin name="Vanilla+ (subtle)">
+              <description>Only the first two tiers are distributed, level floors are six levels higher and every chance is cut to 75%. Most casters will feel like vanilla for the first half of the game.</description>
+              <files>
+                <file source="Presets/TieredCasters_VanillaPlus_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Optional" />
+              </typeDescriptor>
+            </plugin>
+
+            <plugin name="Ruthless">
+              <description>Level floors drop by four, chances go up by a quarter, and expert-tier spells can appear in the mid-thirties. For players who want to fear a room with two warlocks in it.</description>
+              <files>
+                <file source="Presets/TieredCasters_Ruthless_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Optional" />
+              </typeDescriptor>
+            </plugin>
+
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+
+    <installStep name="Optional Modules">
+      <optionalFileGroups order="Explicit">
+        <group name="Extra behaviour (pick any)" type="SelectAny">
+          <plugins order="Explicit">
+
+            <plugin name="Restoration Self-Heal">
+              <description>Casters with Restoration 40 get Fast Healing, Restoration 60 gets Close Wounds. Fights last longer because the enemy patches itself up instead of standing in the open at 10% health.</description>
+              <files>
+                <file source="Modules/TieredCasters_Healers_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Recommended" />
+              </typeDescriptor>
+            </plugin>
+
+            <plugin name="Alteration Armour Spells">
+              <description>The oakflesh to ebonyflesh ladder, handed out by Alteration skill instead of by archetype, so a warlock and a shaman both get what they trained for.</description>
+              <files>
+                <file source="Modules/TieredCasters_Armor_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Recommended" />
+              </typeDescriptor>
+            </plugin>
+
+            <plugin name="Illusion Pressure">
+              <description>Fury, Fear and Calm for the casters whose lore supports them. Off by default: fear and calm change how a fight reads, and not everyone wants that.</description>
+              <files>
+                <file source="Modules/TieredCasters_Illusion_DISTR.ini" />
+              </files>
+              <typeDescriptor>
+                <type name="Optional" />
+              </typeDescriptor>
+            </plugin>
+
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+
+  </installSteps>
+</config>
