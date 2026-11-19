@@ -28,6 +28,8 @@ FORM_TYPES = {
 }
 
 LEVEL_TOKEN = re.compile(r"^(w?\d+(\(\d+(/\d*)?\))?|\d+(/\d*)?)$")
+# NOTE: both halves of a range are optional in SPID, but the configs only ever use
+# the documented bare forms (30, 14(55)) so a typo cannot silently match nothing.
 # One trait segment: optional +/- modifier followed by exactly one trait letter.
 # Documented traits: F Female, M Male, U Unique, S Summonable, C Child,
 # L Leveled, T Teammate, D Dead (7.2+).
