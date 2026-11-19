@@ -60,7 +60,7 @@ Pick a preset, tick the modules, done. Manual install is three file copies if yo
 
 ## Requirements
 
-- Skyrim Special Edition or Anniversary Edition (SE 1.5.39 and newer; tested on 1.6.1170 and 1.7.104)
+- Skyrim Special Edition or Anniversary Edition (SE 1.5.39 and newer, including the 1.6.1170 and 1.7.104 AE builds)
 - [SKSE64](https://skse.silverlock.org/) matching your game version
 - [Address Library for SKSE Plugins](https://www.nexusmods.com/skyrimspecialedition/mods/32444) matching your game version
 - [Spell Perk Item Distributor](https://www.nexusmods.com/skyrimspecialedition/mods/36869) 7.x
